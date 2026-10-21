@@ -1,0 +1,102 @@
+# Copyright (C) 2026 Agent Token contributors
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Agent Token 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/agent-token\n"
+"POT-Creation-Date: 2026-10-21 04:25+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: manual (initial template)\n"
+
+#: agent-token.php:182 agent-token.php:216
+msgid "Permission denied."
+msgstr ""
+
+#. translators: %s: the HTTP header name the agent sends the token in.
+#: agent-token.php:236
+msgid ""
+"Agent Token lets an AI agent or automation tool authenticate to the "
+"WordPress REST API with a single token, sent in the %s header over HTTPS. "
+"The token acts as the user you map below. Only a hash of the token is "
+"stored; the token itself is shown once, when generated."
+msgstr ""
+
+#: agent-token.php:255
+msgid ""
+"New token generated. Copy it now - it will not be shown again, and any "
+"previous token has stopped working."
+msgstr ""
+
+#: agent-token.php:257
+msgid "Setup snippet - paste this to your agent:"
+msgstr ""
+
+#: agent-token.php:259
+msgid ""
+"This snippet contains the only copy of the token. Keep it in your agent "
+"credential vault, not in plain-text files or chat logs."
+msgstr ""
+
+#: agent-token.php:264
+msgid "Status: active (a token is currently in effect)."
+msgstr ""
+
+#: agent-token.php:266
+msgid "Status: inactive (no token has been generated yet)."
+msgstr ""
+
+#: agent-token.php:274
+msgid "Mapped user"
+msgstr ""
+
+#: agent-token.php:283
+msgid ""
+"The token can do exactly what this user can do. Create a dedicated low-"
+"privilege user for your agent (Editor is typical) instead of using your "
+"main admin account."
+msgstr ""
+
+#: agent-token.php:288
+msgid "Generate new token"
+msgstr ""
+
+#: agent-token.php:289
+msgid "Save mapped user only"
+msgstr ""
+
+#: agent-token.php:291
+msgid "Revoke the current token? It will stop working immediately."
+msgstr ""
+
+#: agent-token.php:291
+msgid "Revoke token"
+msgstr ""
+
+#: agent-token.php:296
+msgid "Agent discovery"
+msgstr ""
+
+#: agent-token.php:297
+msgid "Agents can discover how to connect through the public manifest endpoint:"
+msgstr ""
+
+#: agent-token.php:299
+msgid ""
+"The manifest is public and read-only. It never contains the token, its "
+"hash, or any personal data."
+msgstr ""
+
+#. translators: %s: link to the author's Ko-fi page.
+#: agent-token.php:305
+msgid "Agent Token is free and open source. If it saves you time, you can %s."
+msgstr ""
+
+#: agent-token.php:306
+msgid "support its development on Ko-fi"
+msgstr ""
