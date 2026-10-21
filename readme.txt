@@ -1,8 +1,8 @@
-=== Agent Token — API Access for AI Agents ===
+=== Agent Token ===
 Contributors: marsdream
 Tags: rest-api, api, token, authentication, ai
 Requires at least: 6.0
-Tested up to: 6.8
+Tested up to: 7.1
 Stable tag: 1.0.0
 Requires PHP: 7.4
 License: GPLv2 or later
@@ -51,6 +51,9 @@ The token is a 48-character random string (about 285 bits of entropy). Only its 
 
 = How is this different from Application Passwords? =
 Application Passwords are a username + password pair authenticated via Basic Auth. Agent Token is a single secret sent as a header, designed to fit agent platforms' single-key credential stores and to avoid hosts that block Basic Auth. See the Description for the full comparison.
+
+= Can't my agent just log in with my username and password? =
+A saved login serves a browser clicking through wp-admin like a human — it has to pass the full login flow (including two-factor prompts) every session, and it cannot feed anything else. API connectors, cron jobs, and other headless tools never see a browser; what they can store is a single API secret. A token authenticates REST API calls directly, at any hour, with no login ceremony — and unlike your password, it cannot be used to sign in to wp-admin at all. Use saved logins for clicking; use a token for unattended API work.
 
 = Which agents does it work with? =
 Any agent or tool that can call the REST API with a custom header: Muse custom connectors, MCP-based tools, local automation scripts, and similar. The public manifest endpoint lets conforming agents discover the connection details automatically.

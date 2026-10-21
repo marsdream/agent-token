@@ -1,6 +1,7 @@
 <?php
 /**
  * Plugin Name:       Agent Token
+ * Plugin URI:        https://github.com/marsdream/agent-token
  * Description:       Give your AI agent a single, revocable token for the WordPress REST API. The token is sent in a custom header (X-Agent-Token) over HTTPS and acts as a WordPress user you choose. No username and password pairs, no Basic Auth.
  * Version:           1.0.0
  * License:           GPLv2 or later
@@ -49,16 +50,10 @@ final class Agent_Token {
 
 	/** Register hooks. */
 	public static function init() {
-		add_action( 'init', array( __CLASS__, 'load_textdomain' ) );
 		add_filter( 'determine_current_user', array( __CLASS__, 'authenticate' ), 30 );
 		add_action( 'rest_api_init', array( __CLASS__, 'register_routes' ) );
 		add_action( 'admin_menu', array( __CLASS__, 'add_settings_page' ) );
 		add_action( 'admin_post_agent_token_action', array( __CLASS__, 'handle_action' ) );
-	}
-
-	/** Load the plugin text domain for translations. */
-	public static function load_textdomain() {
-		load_plugin_textdomain( 'agent-token', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 	}
 
 	/**

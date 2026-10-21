@@ -1,5 +1,11 @@
 # Agent Token — API Access for AI Agents
 
+English | [简体中文](README.zh-CN.md)
+
+![Agent Token banner](assets/banner.webp)
+
+<img src="assets/icon.webp" width="64" align="left" alt="Agent Token icon">
+
 A WordPress plugin that gives your AI agent a single, revocable token for the WordPress REST API — no username and password pairs, no Basic Auth.
 
 [![Support on Ko-fi](https://img.shields.io/badge/Support%20on-Ko--fi-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/aitoken)
@@ -54,6 +60,9 @@ It returns non-sensitive connection details only: the site URL, the auth header 
 Requirements: WordPress 6.0+, PHP 7.4+. Version 1.0 targets single-site installs (multisite is not supported yet).
 
 ## FAQ
+
+**Can't my agent just log in with my username and password?**
+A saved login serves a browser clicking through wp-admin like a human — it has to pass the full login flow (including two-factor prompts) every session, and it cannot feed anything else. API connectors, cron jobs, and other headless tools never see a browser; what they can store is a single API secret. A token authenticates REST API calls directly, at any hour, with no login ceremony — and unlike your password, it cannot be used to sign in to wp-admin at all. Use saved logins for clicking; use a token for unattended API work.
 
 **Which agents does it work with?**
 Any agent or tool that can call the REST API with a custom header: Muse custom connectors, MCP-based tools, local automation scripts, and similar.
