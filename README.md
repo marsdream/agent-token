@@ -2,7 +2,7 @@
 
 English | [简体中文](README.zh-CN.md)
 
-![Agent Token banner](assets/banner.webp)
+![Keypaw banner](assets/banner-1544x500.png)
 
 <img src="assets/icon.webp" width="64" align="left" alt="Agent Token icon">
 
